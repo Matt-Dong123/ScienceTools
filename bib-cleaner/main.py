@@ -58,7 +58,7 @@ def process_bib(bib):
             value += bib[idx]
             idx += 1
         if len(value) > 0:
-            result[key] = value
+            result[key.lower()] = value
     result['type'] = result['type'].lower()
     result['title'] = '{' + titlecase(result['title']) + '}'
     ret = '@' + result['type'] + '{' + result['alias'] + ',\n'
